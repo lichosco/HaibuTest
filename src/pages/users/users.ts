@@ -40,8 +40,11 @@ export class UsersPage {
     });
   }
   
-  goUsersDetails(){
-    this.navCtrl.push(UserDetailsPage);
+  goUsersDetails(a, b){
+    console.log('selected',b);
+    this.navCtrl.push(UserDetailsPage, {
+      data: b
+    });
   }
 
   ionViewDidLoad() {

@@ -15,7 +15,7 @@
     <ion-content>
         <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
         <ion-list>
-            <button ion-item *ngFor="let user of users | search : terms | sort: {property: column, order: order}" (click)="goUsersDetails(item)">
+            <button ion-item *ngFor="let user of users | search : terms | sort: {property: column, order: order}" (click)="goUsersDetails($event, user)">
               <h2>{{user.nombre}} {{user.apellido}}</h2>
             </button> 
         </ion-list>
